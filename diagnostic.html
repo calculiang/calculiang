@@ -1748,6 +1748,16 @@ function goToInstructions() { showScreen('screen-instructions'); }
   console.log(`Calculia Diagnostic: ${total} questions loaded across 5 domains.`);
   console.log(`Survey: ${SURVEY_BANK.length} | Calculation: ${CALC_BANK.length} | Memory: ${MEMORY_BANK.length} | Visual: ${VISUAL_BANK.length} | Logic: ${LOGIC_BANK.length}`);
 })();
+  document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-menu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+});
 </script>
 </body>
 </html>
